@@ -34,9 +34,8 @@ public class Ejercicio2 {
         System.out.println("La nota final del estudiante 2 " + estudiante2.notaFinal());
         System.out.println("La nota final del estudiante 3 " + estudiante3.notaFinal());
 
+        System.out.println("***********************************************************************");
         System.out.println();
-        System.out.println();
-
     }
 
 }

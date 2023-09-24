@@ -32,7 +32,7 @@ public class Ejercicio1 {
         System.out.println("El volumen de la caja 2 " + caja2.calcularVolumen());
         System.out.println("El volumen de la caja 3 " + caja3.calcularVolumen());
 
-        System.out.println();
+        System.out.println("***********************************************************************");
         System.out.println();
     }
 

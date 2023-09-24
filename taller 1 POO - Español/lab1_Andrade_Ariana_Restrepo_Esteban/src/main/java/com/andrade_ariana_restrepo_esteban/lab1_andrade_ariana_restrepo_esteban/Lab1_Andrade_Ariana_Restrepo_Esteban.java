@@ -1,7 +1,5 @@
 package com.andrade_ariana_restrepo_esteban.lab1_andrade_ariana_restrepo_esteban;
 
-import Ejercicio1.Caja;
-import Ejercicio2.Estudiante;
 import java.util.Scanner;
 
 public class Lab1_Andrade_Ariana_Restrepo_Esteban {
@@ -37,7 +35,7 @@ public class Lab1_Andrade_Ariana_Restrepo_Esteban {
                     Ejercicio4.Ejercicio4.mostrarEjercicio4();
                     break;
                 case 5:
-                    Ejercicio5.Ejercicio5.mostrarEjercicio5();
+                    Ejercicio5.Main.mostrarEjercicio5();
                     break;
             }
         } while (op != 6);
