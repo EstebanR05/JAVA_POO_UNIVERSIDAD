@@ -27,17 +27,18 @@ public class Cuenta {
     }
 
     public void Consignar(double cantidad) {
-        if (this.cantidad >= 0) {
+        if (this.cantidad >= 0 && cantidad > 0) {
             this.cantidad += cantidad;
         }
     }
 
     public String Retirar(double cantidad) {
-        if (this.cantidad >= 0) {
+        if ((this.cantidad - cantidad) < 0) {
+            this.cantidad = 0;
+            return "la resta de la cantidad no puede ser negativa, ahora su cantidad pasara a estar en 0";
+        } else {
             this.cantidad -= cantidad;
             return "la cantidad de dinero a entregar es: " + cantidad + " Su cuenta queda con una cantidad de: " + this.cantidad;
-        } else {
-            return "la cantidad en su cuenta es 0, no tienes fondos para retirar: " + cantidad;
         }
     }
 
