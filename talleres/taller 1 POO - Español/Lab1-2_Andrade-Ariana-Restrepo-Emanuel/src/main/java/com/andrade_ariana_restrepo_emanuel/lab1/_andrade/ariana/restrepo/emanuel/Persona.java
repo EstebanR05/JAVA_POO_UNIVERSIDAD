@@ -6,6 +6,7 @@ public class Persona {
     private String apellido;
     private int identificacion;
     private String sexo;
+    private int edad;
 
     public String getNombre() {
         return nombre;
@@ -39,20 +40,30 @@ public class Persona {
         this.sexo = sexo;
     }
 
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
     //Constructor por defecto 
     public Persona() {
         nombre = "";
         apellido = "";
         identificacion = 0;
         sexo = "";
+        edad = 0;
     }
 
     //Constructor por parametro
-    public Persona(String nombre, String apellido, int identificacion, String sexo) {
+    public Persona(String nombre, String apellido, int identificacion, String sexo, int edad) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.identificacion = identificacion;
         this.sexo = sexo;
+        this.edad = edad;
     }
 
     //Constructor por copia
@@ -61,10 +72,20 @@ public class Persona {
         this.apellido = persona.apellido;
         this.identificacion = persona.identificacion;
         this.sexo = persona.sexo;
+        this.edad = persona.edad;
     }
-    //Metodo que retorna una cadena de caracteres
 
+    //Metodo que retorna una cadena de caracteres
     public String estado() {
         return "nombre=" + nombre + ", apellido=" + apellido + ", identificacion=" + identificacion + ", sexo=" + sexo;
+    }
+
+    //metodo para definir si es mayor de edad
+    public Boolean esMayorDeEdad() {
+        if (this.edad >= 18) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

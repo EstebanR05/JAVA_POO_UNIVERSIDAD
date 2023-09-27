@@ -55,15 +55,12 @@ public class Caja {
 
     //Metodo que retorna una cadena de caracteres
     public String estado() {
-        String estado = "El largo es: " + this.largo + " El ancho es: " + this.ancho
-                + " El alto es: " + this.alto;
+        String estado = "El largo es: " + this.largo + " El ancho es: " + this.ancho + " El alto es: " + this.alto;
         return estado;
     }
 
     //Metodo para calcular el volumnen
     public double calcularVolumen() {
-
         return this.alto * this.ancho * this.largo;
-
     }
 }
