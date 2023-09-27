@@ -36,6 +36,12 @@ public class Estudiante {
         this.carrera = carrera;
     }
 
+    public Estudiante() {
+        this.nombre = "";
+        this.identificacion = 0;
+        this.carrera = "";
+    }
+    
     @Override
     public String toString() {
         return "Estudiante" + "nombre=" + nombre + ", identificacion=" + identificacion + ", carrera=" + carrera;
