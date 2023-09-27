@@ -1,13 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package Ejercicio1;
+package com.andrade_ariana_restrepo_emanuel.lab1._andrade.ariana.restrepo.emanuel;
 
-/**
- *
- * @author e0507
- */
 public class Caja {
 
     private double largo;

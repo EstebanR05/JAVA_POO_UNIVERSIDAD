@@ -12,7 +12,6 @@ public class Ejercicio2 {
 
     public static void mostrarEjercicio2() {
         //ejercicio 2
-        System.out.println("**************************ejercicio 2**********************************");
         Estudiante estudiante1 = new Estudiante();
         Estudiante estudiante2 = new Estudiante(0.3, 3.0, 5.0, "esteban", 20);
         Estudiante estudiante3 = new Estudiante(estudiante2);
@@ -34,7 +33,6 @@ public class Ejercicio2 {
         System.out.println("La nota final del estudiante 2 " + estudiante2.notaFinal());
         System.out.println("La nota final del estudiante 3 " + estudiante3.notaFinal());
 
-        System.out.println("***********************************************************************");
         System.out.println();
     }
 
