@@ -67,5 +67,4 @@ public class Persona {
     public String estado() {
         return "nombre=" + nombre + ", apellido=" + apellido + ", identificacion=" + identificacion + ", sexo=" + sexo;
     }
-
 }

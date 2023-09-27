@@ -74,12 +74,12 @@ public class Estudiante {
         this.nombre = nombre;
         this.edad = edad;
     }
-
-    public Estudiante(Estudiante estudiante) {
+    
+    public Estudiante(Estudiante estudiante){
         this.nota1 = estudiante.nota1;
         this.nota2 = estudiante.nota2;
         this.nota3 = estudiante.nota3;
         this.nombre = estudiante.nombre;
         this.edad = estudiante.edad;
-    }
+    } 
 }
