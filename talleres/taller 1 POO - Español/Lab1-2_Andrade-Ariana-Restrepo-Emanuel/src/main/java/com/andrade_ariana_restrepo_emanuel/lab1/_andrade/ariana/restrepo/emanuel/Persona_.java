@@ -87,9 +87,9 @@ public class Persona_ {
         double pesoActual = peso / (Math.pow(altura, 2));
       
         if (pesoActual >= 20 && pesoActual <= 25) {
-            return "esta en el peso ideal";
+            return "esta el peso ideal";
         } else if (pesoActual < 20) {
-            return "esta en por debajo del peso ideal";
+            return "esta por debajo del peso ideal";
         } else {
             return "la persona esta en sobrepeso";
         }
