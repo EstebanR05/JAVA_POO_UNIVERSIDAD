@@ -12,7 +12,7 @@ public class Persona_ {
 
     private String nombre;
     private int edad;
-    private int dni;
+    private String dni;
     private char sexo;
     private double peso;
     private double altura;
@@ -41,7 +41,7 @@ public class Persona_ {
         this.nombre = "";
         this.edad = 0;
         this.sexo = 'H';
-        this.dni = 0;
+        this.dni = "";
         this.peso = 0;
         this.altura = 0;
     }
@@ -50,12 +50,12 @@ public class Persona_ {
         this.nombre = nombre;
         this.edad = edad;
         this.sexo = sexo;
-        this.dni = 0;
+        this.dni = "";
         this.peso = 0;
         this.altura = 0;
     }
 
-    public Persona_(String nombre, int edad, char sexo, int dni, double peso, double altura) {
+    public Persona_(String nombre, int edad, char sexo, String dni, double peso, double altura) {
         this.nombre = nombre;
         this.edad = edad;
         this.sexo = sexo;
@@ -80,14 +80,32 @@ public class Persona_ {
 
     @Override
     public String toString() {
-        return "Persona_" + "nombre=" + nombre + ", edad=" + edad + ", dni=" + dni + ", sexo=" + sexo + ", peso=" + peso + ", altura=" + altura + '}';
+        return "Persona" + " nombre= " + nombre + ", edad= " + edad + ", dni= " + dni + ", sexo= " + sexo + ", peso= " + peso + ", altura= " + altura;
     }
 
     public double calcularIMC() {
         return this.peso / (this.altura * this.altura);
     }
 
-    public int generaDNI() {
-        return 0;
+    public void generarDni() {
+        int divisor = 23;
+
+        //Generamos un número de 8 digitos
+        int generarDNI = ((int) Math.floor(Math.random() * (100000000 - 10000000) + 10000000));
+        int enviarDNI = generarDNI - (generarDNI / divisor * divisor);
+
+        //generador de dni letra a letra
+        char letra = generaLetraDNI(enviarDNI);
+
+        //tomamos las letras y hacemos un string dni
+        dni = Integer.toString(generarDNI) + letra;
+    }
+
+    private char generaLetraDNI(int DNI) {
+        char generarLetras[] = {'T', 'R', 'W', 'A', 'G', 'M', 'Y',
+            'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z',
+            'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'};
+
+        return generarLetras[DNI];
     }
 }
