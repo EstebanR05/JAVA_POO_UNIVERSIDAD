@@ -83,8 +83,16 @@ public class Persona_ {
         return "Persona" + " nombre= " + nombre + ", edad= " + edad + ", dni= " + dni + ", sexo= " + sexo + ", peso= " + peso + ", altura= " + altura;
     }
 
-    public double calcularIMC() {
-        return this.peso / (this.altura * this.altura);
+    public String calcularIMC() {
+        double pesoActual = peso / (Math.pow(altura, 2));
+      
+        if (pesoActual >= 20 && pesoActual <= 25) {
+            return "esta en el peso ideal";
+        } else if (pesoActual < 20) {
+            return "esta en por debajo del peso ideal";
+        } else {
+            return "la persona esta en sobrepeso";
+        }
     }
 
     public void generarDni() {
