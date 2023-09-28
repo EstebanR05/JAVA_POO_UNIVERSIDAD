@@ -17,6 +17,30 @@ public class Persona_ {
     private double peso;
     private double altura;
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public char getSexo() {
+        return sexo;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public double getAltura() {
+        return altura;
+    }
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }

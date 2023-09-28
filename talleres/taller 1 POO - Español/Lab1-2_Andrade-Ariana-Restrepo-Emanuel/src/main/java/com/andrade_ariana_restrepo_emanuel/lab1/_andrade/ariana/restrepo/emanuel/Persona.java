@@ -77,7 +77,7 @@ public class Persona {
 
     //Metodo que retorna una cadena de caracteres
     public String estado() {
-        return "nombre=" + nombre + ", apellido=" + apellido + ", identificacion=" + identificacion + ", sexo=" + sexo;
+        return "nombre=" + nombre + ", apellido=" + apellido + ", identificacion=" + identificacion + ", sexo=" + sexo + " con edad: " + this.edad;
     }
 
     //metodo para definir si es mayor de edad
