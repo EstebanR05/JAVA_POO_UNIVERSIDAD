@@ -25,10 +25,6 @@ public class Persona_ {
         return edad;
     }
 
-    public String getDni() {
-        return dni;
-    }
-
     public char getSexo() {
         return sexo;
     }

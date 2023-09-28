@@ -180,7 +180,7 @@ public class Lab12_AndradeArianaRestrepoEmanuel {
                         System.out.println("Ingrese su seleccion: ");
                         menuCuenta2 = scan.nextInt();
 
-                        switch (menuCuenta1) {
+                        switch (menuCuenta2) {
                             case 1:
                                 System.out.println("Ingrese la cantidad para su consignacion: ");
                                 consignarCuenta2 = scan.nextDouble();
