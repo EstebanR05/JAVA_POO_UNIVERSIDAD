@@ -30,7 +30,6 @@ public class Ejemplo1_herencia {
     public static Estudiante[] crearEstudiantes(int n) {
         Scanner scan = new Scanner(System.in);
         Estudiante[] estudiantes = new Estudiante[n];
-        int op = 0;
         String nombre = "";
         int edad = 0;
         int codigo = 0;
