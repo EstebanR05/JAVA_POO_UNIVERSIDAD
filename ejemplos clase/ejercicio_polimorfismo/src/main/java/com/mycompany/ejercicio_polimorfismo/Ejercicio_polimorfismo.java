@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Ejercicio_polimorfismo {
-
+    
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         ArrayList<Figura> figuras = new ArrayList<>();
         int menu = 0;
-
+        
         do {
             System.out.println("******************Ingresar figuras*********************");
             System.out.println("1.Agregar Cuadrado");
@@ -21,7 +21,7 @@ public class Ejercicio_polimorfismo {
             System.out.println("7.salir");
             menu = scan.nextInt();
             System.out.println("*******************************************************");
-
+            
             switch (menu) {
                 case 1:
                     agregarCuadrado(figuras);
@@ -44,7 +44,7 @@ public class Ejercicio_polimorfismo {
             }
         } while (menu != 7);
     }
-
+    
     public static void agregarCuadrado(ArrayList<Figura> figuras) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Ingresa un lado del cuadrado");
@@ -52,7 +52,7 @@ public class Ejercicio_polimorfismo {
         Cuadrado cuadrado = new Cuadrado(lado);
         figuras.add(cuadrado);
     }
-
+    
     public static void agregarCirculo(ArrayList<Figura> figuras) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Ingresa el radio del circulo");
@@ -60,28 +60,35 @@ public class Ejercicio_polimorfismo {
         Circulo circulo = new Circulo(radio);
         figuras.add(circulo);
     }
-
+    
     public static void mostrarInformacion(ArrayList<Figura> figuras) {
         for (Figura figura : figuras) {
             System.out.println(figura.toString());
         }
     }
-
+    
     public static void mostrarArea(ArrayList<Figura> figuras) {
         for (Figura figura : figuras) {
             System.out.println("El area es: " + figura.area());
         }
     }
-
+    
     public static void mostrarDibujando(ArrayList<Figura> figuras) {
         for (Figura figura : figuras) {
-            System.out.println(figura);
+            if (figura instanceof Circulo) {
+                ((Circulo) figura).Dibujar();
+            }
+            if (figura instanceof Cuadrado) {
+                ((Cuadrado) figura).Dibujar();
+            }
         }
     }
-
+    
     public static void mostrarRotando(ArrayList<Figura> figuras) {
         for (Figura figura : figuras) {
-            System.out.println(figura);
+            if (figura instanceof Cuadrado) {
+                ((Cuadrado) figura).rotar(20);
+            }
         }
     }
 }
